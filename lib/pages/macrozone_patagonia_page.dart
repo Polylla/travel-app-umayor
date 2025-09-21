@@ -14,7 +14,7 @@ class MacrozoneAtacamaPage extends StatelessWidget {
       drawer: HamburgerMenu(
         onNavigateMacrozone: (ruta) {
           Navigator.pop(context); // cierra drawer
-          if (ruta != kAtacamaMacrozone.ruta) {
+          if (ruta != kPatagoniaMacrozone.ruta) {
             // Aquí navegas a las otras macrozonas si tienes páginas listas
             // Navigator.pushNamed(context, ruta);
           }
@@ -40,13 +40,13 @@ class MacrozoneAtacamaPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    kAtacamaMacrozone.nombre_lugar,
+                    kPatagoniaMacrozone.nombre_lugar,
                     style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                       fontWeight: FontWeight.w800,
                     ),
                   ),
                   const SizedBox(height: 8),
-                  ...kAtacamaMacrozone.parrafos
+                  ...kPatagoniaMacrozone.parrafos
                       .map(
                         (p) => Padding(
                           padding: const EdgeInsets.only(bottom: 12),
@@ -62,7 +62,7 @@ class MacrozoneAtacamaPage extends StatelessWidget {
           //Card Clima
           SliverPadding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-            sliver: SliverToBoxAdapter(child: ClimaCard(clima: kAtacamaClima)),
+            sliver: SliverToBoxAdapter(child: ClimaCard(clima: kPatagoniaClima)),
           ),
 
           // Sección: Destinos que te van a encantar (Carrusel)
@@ -94,7 +94,7 @@ class MacrozoneAtacamaPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   ImageCarousel(
-                    images: kAtacamaMacrozone.lugar
+                    images: kPatagoniaMacrozone.lugar
                         .map((e) => e.imagen)
                         .toList(),
                   ),
@@ -110,10 +110,10 @@ class MacrozoneAtacamaPage extends StatelessWidget {
               child: ListView.separated(
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 scrollDirection: Axis.horizontal,
-                itemCount: kAtacamaMacrozone.lugar.length,
+                itemCount: kPatagoniaMacrozone.lugar.length,
                 separatorBuilder: (_, __) => const SizedBox(width: 8),
                 itemBuilder: (_, i) =>
-                    _LugarChip(item: kAtacamaMacrozone.lugar[i]),
+                    _LugarChip(item: kPatagoniaMacrozone.lugar[i]),
               ),
             ),
           ),
@@ -147,7 +147,7 @@ class MacrozoneAtacamaPage extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 8),
-                  ...kAtacamaMacrozone.experiencias.map(
+                  ...kPatagoniaMacrozone.experiencias.map(
                     (e) => Card(
                       elevation: 0,
                       child: ExpansionTile(

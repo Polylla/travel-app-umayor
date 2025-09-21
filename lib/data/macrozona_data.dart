@@ -4,102 +4,103 @@ import 'package:travel_app_umayor/models/lugar.dart';
 import 'package:travel_app_umayor/models/macrozona.dart';
 import 'package:travel_app_umayor/models/parrafo.dart';
 
-const kAtacamaParrafos = [
+const kPatagoniaParrafos = [
   Parrafo(
     texto:
-        "Lejos de ser inerte, el Desierto de Atacama es una zona abundante en energía, gracias a sus acogedoras culturas ancestrales y a los oasis que son fuente de vida en el desierto más árido del mundo.",
+        "En medio de los cinematográficos paisajes podrás descubrir ciudades y pueblos pioneros, donde se respira una historia ganadera y el estilo del gaucho de la Patagonia. Recorre en auto o bicicleta la Carretera Austral para maravillarte con lo mejor del norte de la Patagonia.",
   ),
   Parrafo(
     texto:
-        "Asciende los más de 4.000 metros de altura del altiplano andino para descubrir pequeños poblados que mantienen intactas sus costumbres en medio de extremos escenarios que vale la pena fotografiar.",
+        "i te apasiona el trekking, las Torres del Paine son tu norte: bosques, cerros, saltos de agua, lagos y vistas privilegiadas a los Campos de Hielo Sur serán parte de tu experiencia.",
   ),
   Parrafo(
     texto:
-        "Visita San Pedro de Atacama y explora paisajes únicos en el mundo. Salares, géiseres y lagunas de un intenso color azul, son parte de los lugares que te asombrarán.",
-  ),
-  Parrafo(
-    texto:
-        "Emprende un viaje por las estrellas. Aprende más sobre los astros y las constelaciones en uno de los múltiples observatorios astronómicos de la zona norte del país.",
+        "Para vivir un viaje único y aventurero, embárcate en una experiencia antártica. Navega por los fiordos y canales para llegar hasta el Cabo de Hornos, el punto más austral del continente, o sigue más allá hasta llegar a la Antártica, un tesoro científico y ecológico que no puedes dejar de visitar.",
   ),
 ];
 
-const kAtacamaLugares = [
-  Lugar(destino: "Valle del Huasco", imagen: "assets/images/atacama_1.jpg"),
-  Lugar(destino: "San Pedro de Atacama", imagen: "assets/images/atacama_2.jpg"),
-  Lugar(destino: "La Serena y Coquimbo", imagen: "assets/images/atacama_3.jpg"),
+const kPatagoniaLugares = [
+  Lugar(destino: "Antártica Chilena", imagen: "assets/images/patagonia_1.jpg"),
+  Lugar(destino: "Lago General Carrera", imagen: "assets/images/patagonia_2.jpg"),
+  Lugar(destino: "Tierra del Fuego", imagen: "assets/images/patagonia_3.jpg"),
+  Lugar(destino: "Torres del Paine", imagen: "assets/images/patagonia_4.jpg"),
+  Lugar(destino: "Puerto Natales", imagen: "assets/images/patagonia_5.jpg"),
+  Lugar(destino: "Punta Arenas", imagen: "assets/images/patagonia_6.jpg"),
+  Lugar(destino: "Coyhaique y Puerto Aysén", imagen: "assets/images/patagonia_7.jpg"),
+  Lugar(destino: "Carretera Austral", imagen: "assets/images/patagonia_8.jpg"),
 ];
 
-const kAtacamaExperiencias = [
+const kPatagoniaExperiencias = [
   Experiencia(
     titiulo: 'Turismo indígena',
     descripcion: Parrafo(
       texto:
-          'Aprende de las tradiciones atacameñas en visitas guiadas responsables.',
+          '¡Ven a compartir y convivir con los pueblos originarios y sus tradiciones!',
     ),
   ),
   Experiencia(
     titiulo: 'Vida urbana',
     descripcion: Parrafo(
-      texto: 'Descubre mercados locales, artesanía y gastronomía en San Pedro.',
-    ),
-  ),
-  Experiencia(
-    titiulo: 'Playas',
-    descripcion: Parrafo(
-      texto: 'Explora caletas del norte chico en tu ruta hacia el desierto.',
+      texto: 'Ajetreada vida nocturna, modernos centros comerciales, productos textiles y gastronómicos típicos de Chile y mucho más.',
     ),
   ),
   Experiencia(
     titiulo: 'Termas y bienestar',
     descripcion: Parrafo(
-      texto: 'Relájate en termas naturales después de una jornada de trekking.',
+      texto: '¿Te imaginas sumergido en calientes aguas termales mientras la lluvia cae sobre los frondosos bosques a tu alrededor?',
+    ),
+  ),
+  Experiencia(
+    titiulo: 'Cruceros y navegaciones',
+    descripcion: Parrafo(
+      texto: '¿Buscas vivir una experiencia única, rodeado de paisajes escénicos y con las comodidades propias de un rey?',
     ),
   ),
   Experiencia(
     titiulo: 'Astroturismo',
     descripcion: Parrafo(
-      texto: 'Cielos prístinos ideales para tours astronómicos y fotografía.',
+      texto: '¡Vive un viaje a las estrellas en Chile!',
     ),
   ),
   Experiencia(
     titiulo: 'Cultura',
     descripcion: Parrafo(
-      texto: 'Sitios arqueológicos y museos con valioso patrimonio.',
+      texto: '¡Ven a compartir y convivir con los pueblos originarios y sus tradiciones!',
     ),
   ),
   Experiencia(
     titiulo: 'Vinos y Gastronomía',
     descripcion: Parrafo(
-      texto: 'Sabores locales con productos del altiplano y del mar.',
+      texto: 'Una combinación de exquisitos productos del mar y gran variedad de alimentos provenientes de la tierra…',
     ),
   ),
   Experiencia(
     titiulo: 'Aventura y deporte',
     descripcion: Parrafo(
-      texto: 'Dunas, senderos y rutas de altura para viajeros experimentados.',
+      texto: 'Si te gusta sentir la adrenalina, no hay duda ¡Chile es para ti!',
     ),
   ),
   Experiencia(
     titiulo: 'Naturaleza',
     descripcion: Parrafo(
-      texto: 'Flamencos, vicuñas y bofedales en ecosistemas únicos.',
+      texto: 'Hay pocos lugares en el mundo donde puedes disfrutar vistas tan diversas como en Chile…',
     ),
   ),
 ];
 
-const kAtacamaClima = Clima(
-  maxima: 24,
+const kPatagoniaClima = Clima(
+  maxima: 18,
   minima: 2,
   dia: 'SUNDAY',
-  nombre_lugar: 'Norte y Desierto de Atacama',
-  parrafo: Parrafo(texto: 'La información corresponde a - Antofagasta, Chile'),
+  nombre_lugar: 'Patagonia y Antártica',
+  parrafo: Parrafo(texto: 'La información corresponde a - Av. Pdte. Eduardo Frei Montalva 768, Punta Arenas, Magallanes y la Antártica Chilena, Chile'),
 );
 
-const kAtacamaMacrozone = Macrozone(
-  id: 'atacama',
-  nombre_lugar: 'Norte y Desierto de Atacama',
-  ruta: '/atacama',
-  parrafos: kAtacamaParrafos,
-  lugar: kAtacamaLugares,
-  experiencias: kAtacamaExperiencias,
+const kPatagoniaMacrozone = Macrozone(
+  id: 'Patagonia y Antártica',
+  nombre_lugar: 'Patagonia y Antártica',
+  ruta: '/Patagonia',
+  parrafos: kPatagoniaParrafos,
+  lugar: kPatagoniaLugares,
+  experiencias: kPatagoniaExperiencias,
 );

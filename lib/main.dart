@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app_umayor/pages/macrozone_atacama_page.dart';
+import 'package:travel_app_umayor/pages/macrozone_patagonia_page.dart';
 
 void main() {
   runApp(const MyApp());
