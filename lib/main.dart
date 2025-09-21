@@ -28,23 +28,20 @@ class MyApp extends StatelessWidget {
       ),
       themeMode: ThemeMode.system,
 
-      // Empezamos en Atacama
-      initialRoute: '/atacama',
+      initialRoute: '/patagonia',
 
-      // Rutas nombradas para el Drawer "Dónde ir"
       routes: {
-        '/atacama': (_) => const MacrozoneAtacamaPage(),
+        '/atacama': (_) =>
+            const MacrozonePlaceholderPage(title: 'Patagonia y Antártica'),
         '/centro': (_) => const MacrozonePlaceholderPage(
           title: 'Centro, Santiago y Valparaíso',
         ),
         '/rapanui': (_) => const MacrozonePlaceholderPage(title: 'Rapa Nui'),
         '/sur': (_) =>
             const MacrozonePlaceholderPage(title: 'Sur, Lagos y Volcanes'),
-        '/patagonia': (_) =>
-            const MacrozonePlaceholderPage(title: 'Patagonia y Antártica'),
+        '/patagonia': (_) => const MacrozonePatagoniaPage(),
       },
 
-      // Fallback por si llega una ruta desconocida
       onUnknownRoute: (settings) => MaterialPageRoute(
         builder: (_) =>
             const MacrozonePlaceholderPage(title: 'Ruta no encontrada'),

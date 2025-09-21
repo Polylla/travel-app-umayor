@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:travel_app_umayor/models/clima.dart';
 
 class ClimaCard extends StatelessWidget {
@@ -8,59 +9,88 @@ class ClimaCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cs = Theme.of(context).colorScheme;
-    return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            cs.primaryContainer.withOpacity(0.6),
-            cs.primaryContainer.withOpacity(0.3),
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      padding: const EdgeInsets.all(16),
-      child: DefaultTextStyle(
-        style: Theme.of(
-          context,
-        ).textTheme.bodyMedium!.copyWith(color: cs.onPrimaryContainer),
-        child: Row(
-          children: [
-            Expanded(
-              child: Column(
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(16),
+      child: Stack(
+        children: [
+          Positioned.fill(
+            child: SvgPicture.asset(
+              'assets/images/fondo-mist.svg',
+              fit: BoxFit.cover,
+            ),
+          ),
+          Positioned.fill(
+            child: Container(color: Colors.black.withOpacity(0.25)),
+          ),
+          // Contenido
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: DefaultTextStyle(
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                color: Colors.white, // <-- textos blancos
+              ),
+              child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    '${clima.maxima}ºC / ${clima.minima}ºC',
-                    style: Theme.of(context).textTheme.headlineMedium!.copyWith(
-                      fontWeight: FontWeight.w700,
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          clima.nombre_lugar,
+                          style: Theme.of(context).textTheme.titleLarge!
+                              .copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w800,
+                              ),
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          clima.dia,
+                          style: Theme.of(context).textTheme.bodySmall!
+                              .copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                              ),
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          clima.parrafo.texto,
+                          style: Theme.of(
+                            context,
+                          ).textTheme.bodySmall!.copyWith(color: Colors.white),
+                        ),
+                      ],
                     ),
                   ),
-                  const SizedBox(height: 4),
-                  Text(
-                    clima.dia.toUpperCase(),
-                    style: const TextStyle(letterSpacing: 1.2),
+                  const SizedBox(width: 12),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        'Máx: ${clima.maxima}°',
+                        style: Theme.of(context).textTheme.titleMedium!
+                            .copyWith(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        'Mín: ${clima.minima}°',
+                        style: Theme.of(context).textTheme.titleMedium!
+                            .copyWith(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 8),
-                  Text(
-                    clima.nombre_lugar,
-                    style: Theme.of(context).textTheme.titleMedium,
-                  ),
-                  const SizedBox(height: 6),
-                  Text(clima.parrafo.texto),
                 ],
               ),
             ),
-            const SizedBox(width: 8),
-            Icon(
-              Icons.cloud,
-              size: 56,
-              color: cs.onPrimaryContainer.withOpacity(0.7),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
