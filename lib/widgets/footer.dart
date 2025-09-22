@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-//FooterWidget: pie de página con redes sociales, enlaces de interés y contacto//
 class Footer extends StatelessWidget {
   const Footer({super.key});
 

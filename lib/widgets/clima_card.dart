@@ -26,9 +26,9 @@ class ClimaCard extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16),
             child: DefaultTextStyle(
-              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                color: Colors.white, // <-- textos blancos
-              ),
+              style: Theme.of(
+                context,
+              ).textTheme.bodyMedium!.copyWith(color: Colors.white),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

@@ -126,7 +126,6 @@ class MacrozonePatagoniaPage extends StatelessWidget {
             ),
 
             // Experiencias (acordeón)
-            // Experiencias (acordeón)
             SliverToBoxAdapter(
               child: Container(
                 color: kSectionBg,
@@ -156,7 +155,6 @@ class MacrozonePatagoniaPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 8),
 
-                      // lista con separadores sin duplicar líneas
                       ...List.generate(
                         kPatagoniaMacrozone.experiencias.length,
                         (i) {
@@ -177,7 +175,7 @@ class MacrozonePatagoniaPage extends StatelessWidget {
               ),
             ),
 
-            // Footer adoptado (al final del scroll)
+            // Footer
             SliverToBoxAdapter(child: const Footer()),
           ],
         ),
