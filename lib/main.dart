@@ -69,8 +69,8 @@ class MacrozonePlaceholderPage extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(24),
           child: Text(
-            'Esta macrozona aún no está implementada.\n\n'
-            'Úsala como plantilla o navega a otra desde el menú.',
+            'Esta macrozona aún no está implementada.\n\n',
+
             textAlign: TextAlign.center,
           ),
         ),

@@ -25,7 +25,6 @@ class HamburgerMenu extends StatelessWidget {
               ],
             ),
 
-            // === DÓNDE IR (desplegable) ===
             Theme(
               data: Theme.of(context).copyWith(
                 dividerColor: Colors.white24,
@@ -39,9 +38,7 @@ class HamburgerMenu extends StatelessWidget {
                 tilePadding: const EdgeInsets.symmetric(horizontal: 8),
                 childrenPadding: const EdgeInsets.only(left: 8, bottom: 4),
                 iconColor: color.primary,
-                // flecha cuando está abierto
                 collapsedIconColor: Colors.white,
-                // flecha cuando está cerrado
                 title: const Text(
                   'DÓNDE IR',
                   style: TextStyle(
@@ -62,7 +59,6 @@ class HamburgerMenu extends StatelessWidget {
 
             const SizedBox(height: 12),
 
-            // Secciones no desplegables (quedan como estaban)
             _sectionTitle('QUÉ HACER'),
             const ListTile(
               title: Text('—', style: TextStyle(color: Colors.white60)),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Header extends StatelessWidget implements PreferredSizeWidget {
   const Header({
     super.key,
@@ -11,7 +10,6 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
   });
 
   final double height;
-
 
   final VoidCallback? onTapLogo;
   final VoidCallback? onSearch;
@@ -24,9 +22,6 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
     final scaffold = Scaffold.maybeOf(context);
     if (scaffold?.hasDrawer ?? false) {
       scaffold!.openDrawer();
-    } else {
-      // No hay drawer; podrías mostrar un SnackBar o ignorar
-      // ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('No hay menú disponible')));
     }
   }
 
@@ -38,7 +33,6 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
       toolbarHeight: height,
       backgroundColor: Colors.white,
       elevation: 0,
-      // Logo
       leadingWidth: 120,
       leading: InkWell(
         onTap: onTapLogo,
@@ -47,13 +41,11 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
           child: Image.network(
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0le_roEpezBZUQ0VKQCBUYJW8wghfqQguCw&s",
             fit: BoxFit.contain,
-            errorBuilder: (_, __, ___) =>
-                Icon(Icons.public, color: cs.primary),
+            errorBuilder: (_, __, ___) => Icon(Icons.public, color: cs.primary),
           ),
         ),
       ),
 
-      // Acciones: buscar, idioma, menú (funcional)
       actions: [
         IconButton(
           tooltip: 'Buscar',
@@ -69,11 +61,10 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
               width: 30,
               height: 20,
               errorBuilder: (_, __, ___) =>
-              const Icon(Icons.flag, color: Colors.red),
+                  const Icon(Icons.flag, color: Colors.red),
             ),
           ),
         ),
-        // Usamos un Builder para capturar un contexto "debajo" del Scaffold
         Builder(
           builder: (ctx) => IconButton(
             tooltip: 'Menú',
